@@ -1,0 +1,6 @@
+{
+  "name": "DEENWAR Pro — Sacred Islamic Sanctuary, Noble Quran & Hadith",
+  "description": "An ultra-premium Islamic sanctuary featuring all 114 Surahs of the Noble Quran, authentic Hadith compendiums, 99 Divine Names, 100 Prophetic Titles, Smart Tasbeeh, and ad management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

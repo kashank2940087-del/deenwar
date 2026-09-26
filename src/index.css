@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #f2ca50;
+    --primary-container: #d4af37;
+    --surface: #101412;
+    --surface-low: #181c1a;
+    --surface-high: #272b28;
+    --secondary: #a7cfbd;
+  }
+
+  body {
+    background-color: #101412;
+    color: #e0e3df;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-quran {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #101412;
+}
+::-webkit-scrollbar-thumb {
+  background: #313633;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Material Symbols Outlined font properties */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Shimmer shine animation for premium boxes */
+@keyframes goldShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.premium-shine-gold {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(242, 202, 80, 0.45) 50%,
+    rgba(212, 175, 55, 0.15) 100%
+  );
+  background-size: 200% 100%;
+  animation: goldShine 4s linear infinite;
+}
+
+.premium-glow-border {
+  position: relative;
+}
+.premium-glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(242, 202, 80, 0.7), rgba(212, 175, 55, 0.2), rgba(167, 207, 189, 0.5));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+/* 3D perspective styling */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-3d {
+  transform-style: preserve-3d;
+}
